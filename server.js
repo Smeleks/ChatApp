@@ -11,11 +11,12 @@ const server = http.createServer(app);
 
 io.on('connection', (socket) => {
     console.log('User Connected Successful!');
-    
-    socket.on('disconnect', (socket) => {
-        console.log('User Disconncted!');
+
+    socket.on('disconnect', () => {
+        console.log('User Disconnected!');
     });
 });
+
 
 server.listen(PORT, () => {
 console.log(`server is running on port ${PORT}`);
