@@ -14,18 +14,19 @@ const io = socket(server);
 io.on('connection', (socket) => {
     console.log('User Connected Successful!');
 
-    socket.emit('message', 'Hello, New User!');
-    socket.broadcast.emit('message', 'New User Joined!');
+    socket.emit("message", "Wellcome to server");
+
+    socket.broadcast.emit("message", "A new user joind");
 
     socket.on('chatMsg', (m) => {
-        io.emit('message', m);
-    });
+        io.emit("message", m)
+    })
 
     socket.on('disconnect', () => {
-        io.emit('message', 'User Disconnected!');
-    });
+        io.emit("message", "A user has left")
+    })
 });
 
 server.listen(PORT, () => {
-console.log(`server is running on port ${PORT}`);
+    console.log(`server is running on port ${PORT}`);
 });
