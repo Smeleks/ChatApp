@@ -1,28 +1,34 @@
 const socket = io();
+const container = document.querySelector(".chat-messages");
+
+socket.on('message', (data) => {
+    outputMsg(data);
+    container.scrollTop = container.scrollHeight;
+});
+
 const chatForm = document.getElementById("chat-form");
 
-function outputMsg (m){
+chatForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (event.target.elements.msg.value) {
+        let message = event.target.elements.msg.value;
+        event.target.elements.msg.value = "";
+        socket.emit("chat-msg", message);
+    }
+    else {
+        alert("Please write a message before sending");
+    }
+});
 
-  const div = document.createElement('div');
-  
-  const container = document.querySelector(".chat-messages");
-  div.classList.add('message');
-  
-  div.innerHTML = `<p class='meta'>John
-  <span>12:20pm</span></p><p class='text'>${m}</p>`;
-  container.appendChild(div);
-  
-  }
 
-chatForm.addEventListener("submit",(e) => {
-  e.preventDefault();
-  if(e.target.elements.msg.value){
-    const msg = e.target.elements.msg.value;
-    e.target.elements.msg.value = "";
-    socket.emit("chatMsg",msg);
-  }
-  
-})
-socket.on('message',(data) =>{
-  outputMsg(data);
-})
+function outputMsg(data) {
+
+    const div = document.createElement('div');
+
+    div.classList.add('message');
+
+    div.innerHTML = `<p class='meta'>${data.username}
+    <span>${data.time}</span></p><p class='text'>${data.message}</p>`;
+    container.appendChild(div);
+
+}

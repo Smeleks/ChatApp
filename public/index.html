@@ -1,50 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.js"></script>
-    <title>Ba-chat-A</title>
-  </head>
-  <body>
-    <div class="login-container">
-      <header class="login-header">
-        <h1>
-          <div>
-            <img class="chat-icon" src="icons/eyes.gif" alt="chatbox" />
-          </div>
-          Ba-CHAT-a
-        </h1>
-      </header>
-      <main class="login-main">
-        <form id="enter-chat" action="chat.html">
-          <div class="form-control">
-            <label for="username">Username</label>
-            <input
-              type="text"
-              name="username"
-              id="username"
-              placeholder="Enter username..."
-              required
-            />
-          </div>
-          <div class="form-control">
-            <label for="room">Room</label>
-            <select name="room" id="room">
-              <option value="Music">Music</option>
-              <option value="Books">Books</option>
-              <option value="Movies">Movies</option>
-              <option value="Games">Games</option>
-              <option value="Sport">Sport</option>
-              <option value="Art">Art</option>
-            </select>
-          </div>
-          <button type="submit" class="btn">LOGIN</button>
-        </form>
-        <img class="chat-gif" src="icons/animated.gif" alt="chatbox" />
-      </main>
-    </div>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.js"></script>
+  <title>Sign In</title>
+</head>
+
+<body>
+  <div class="login-container">
+    <header class="login-header">
+      <h1>
+        <div>
+          <img class="chat-icon" src="icons/eyes.gif" alt="chatbox" />
+        </div>
+        Sign In
+      </h1>
+    </header>
+    <main class="login-main">
+      <form id="enter-chat" action="chat.html">
+        <div class="form-control">
+          <label for="username">Username</label>
+          <input type="text" name="username" id="username" placeholder="Enter username..." required />
+        </div>
+        <div class="form-control">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" placeholder="Enter password..." required />
+        </div>
+        <div class="form-control">
+          <label for="room">Room</label>
+          <select name="room" id="room">
+            <option value="Music">Music</option>
+            <option value="Books">Books</option>
+            <option value="Movies">Movies</option>
+            <option value="Games">Games</option>
+            <option value="Sport">Sport</option>
+            <option value="Art">Art</option>
+          </select>
+        </div>
+        <button type="submit" class="btn">Sign In</button>
+        <div>Not registered? <a href="signup.html">Sign Up now.</a></div>
+      </form>
+      <img class="chat-gif" src="icons/animated.gif" alt="chatbox" />
+    </main>
+  </div>
+</body>
+
 </html>
