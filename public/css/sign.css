@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+body {
+  background-image: url(../img/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Poppins';
+}
+
+a {
+  text-decoration: none;
+}
+
+/* #displayMessage {
+   height: 20px;
+   width: 100%;
+   margin: auto;
+   text-align: center;
+   font-weight: 600;
+} */
+
+.sign-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 650px;
+  height: 450px;
+  border-radius: 15px;
+  line-height: 0.1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+#enter-chat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.sign-heading {
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 200;
+}
+
+.sign-second-heading {
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 200;
+  margin-bottom: 40px;
+}
+
+input[class='username'],
+input[class='password'],
+input[class='rep-password'] {
+    display: block;
+    background: rgba(0, 0, 0, 0.3);
+    border: 0;
+    text-align: center;
+    border-radius: 15px; 
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+    margin: 5px 0;
+    width: 240px;
+    outline: none;
+    padding: 16px 20px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+select[class="choose-room"] {
+  display: block;
+  background: rgba(0, 0, 0, 0.3);
+  border: 0;
+  text-align: center;
+  border-radius: 15px; 
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 16px;
+  margin: 5px 0;
+  width: 280px;
+  outline: none;
+  padding: 16px 20px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.sign-btn {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  width: 180px;
+  height: 45px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.sign-up-link {
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+}
+
+.underline-text {
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+  text-decoration: underline;
+}
