@@ -17,13 +17,11 @@ a {
   text-decoration: none;
 }
 
-/* #displayMessage {
-   height: 20px;
-   width: 100%;
-   margin: 5px;
-   text-align: center;
-   font-weight: 100;
-} */
+#displayMessage {
+  height: 0px;
+  text-align: center;
+  font-weight: bold;
+}
 
 .sign-container {
   background-color: rgba(0, 0, 0, 0.3);
@@ -84,7 +82,7 @@ select[class="choose-room"] {
   border: 0;
   text-align: center;
   border-radius: 15px; 
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.3);
   font-size: 16px;
   margin: 5px 0;
   width: 280px;
@@ -94,6 +92,19 @@ select[class="choose-room"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.3);
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
 }
 
 .sign-btn {

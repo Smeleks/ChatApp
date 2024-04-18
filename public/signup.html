@@ -1,31 +1,41 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <meta http-equiv='X-UA-Compatible' content='ie=edge' />
-    <link rel='stylesheet' href='css/sign.css' />
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <link rel='stylesheet' href='./css/sign.css'>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"rel="stylesheet">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.js'></script>
     <script src='js/msgStatus.js'></script>
     <title>Sign Up</title>
 </head>
 <body>
-    <div id='displayMessage'></div>
-
     <div class='sign-container'>
       <h1 class='sign-heading'> Create Your Account </h1>
         <h3 class='sign-second-heading'>Enter your username and password </h3>
+
+        <p id='displayMessage'></p>
+
         <form id='enter-chat' method='post' action='/signup'>
           <input type='text' name='username' id='username' class='username' placeholder='Choose Username' required />
 
-          <input type='password' name='password' id='password' class='password' placeholder='Create Password' required />
-
-          <input type='password' name='password' id='rep-password' class='rep-password' placeholder='Repeat the Password' required />
+          <div class="input-wrapper">
+            <input type="password" name="password" id="password" class="password" placeholder="Create Password" required />
+            <i class="ri-eye-line toggle-password" onclick="togglePasswordVisibility('password')"></i>
+          </div>
+          
+          <div class="input-wrapper">
+            <input type="password" name="password" id="rep-password" class="rep-password" placeholder="Repeat the Password" required />
+            <i class="ri-eye-line toggle-password" onclick="togglePasswordVisibility('rep-password')"></i>
+          </div>
             
           <button type='submit' class='sign-btn'>Sign Up</button>
             
           <div class='sign-up-link'> Have an account? <a href='index.html' class='underline-text'> Sign In </a> </div>
         </form>
     </div>
+
+    <script src="./js/sign.js"></script>
 </body>
 </html>

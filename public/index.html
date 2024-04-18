@@ -1,41 +1,46 @@
 <!DOCTYPE html>
 <html lang='en'>
-
 <head>
-  <meta charset='UTF-8' />
-  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-  <meta http-equiv='X-UA-Compatible' content='ie=edge' />
-  <link rel='stylesheet' href='css/sign.css' />
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.js'></script>
-  <script src='js/msgStatus.js'></script>
-  <title>Sign In</title>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta http-equiv='X-UA-Compatible' content='ie=edge' />
+    <link rel='stylesheet' href='./css/sign.css'/>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"rel="stylesheet">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.js'></script>
+    <script src='js/msgStatus.js'></script>
+    <title>Sign In</title>
 </head>
 <body>
-  <div id='displayMessage'></div>
-
     <div class='sign-container'>
       <h1 class='sign-heading'> Welcome Back </h1>
         <h3 class='sign-second-heading'>Enter your username and password </h3>
-          <form id='enter-chat' action='chat.html'>
 
-            <input type='text' name='username' id='username' class='username' placeholder='Enter Username' required />
+        <p id='displayMessage'></p>
 
-            <input type='password' name='password' id='password' class='password' placeholder='Enter Password' required />
+        <form id='enter-chat' action='chat.html'>
+          <input type='text' name='username' id='username' class='username' placeholder='Enter Username' required />
 
-            <select name='room' id='room' class='choose-room'>
-              <option value=''> Choose Room </option>
-              <option value='Music'> Music </option>
-              <option value='Books'> Books </option>
-              <option value='Movies'> Movies </option>
-              <option value='Games'> Games </option>
-              <option value='Sport'> Sport </option>
-              <option value='Art'> Art </option>
-            </select>
+          <div class="input-wrapper">
+            <input type="password" name="password" id="password" class="password" placeholder="Enter Password" required />
+            <i class="ri-eye-line toggle-password" onclick="togglePasswordVisibility('password')"></i>
+          </div>
 
-            <button type='submit' class='sign-btn'> Sign In </button>
+          <select name='room' id='room' class='choose-room'>
+            <option value=''> Choose Room </option>
+            <option value='Music'> Music </option>
+            <option value='Books'> Books </option>
+            <option value='Movies'> Movies </option>
+            <option value='Games'> Games </option>
+            <option value='Sport'> Sport </option>
+            <option value='Art'> Art </option>
+          </select>
+
+          <button type='submit' class='sign-btn'> Sign In </button>
         
-            <div class='sign-up-link'> Do you not have an account? <a href='signup.html' class='underline-text'> Sign Up </a> </div>
+          <div class='sign-up-link'> Don't have an account? <a href='signup.html' class='underline-text'> Sign Up </a> </div>
         </form> 
     </div>
+
+    <script src="./js/sign.js"></script>
 </body>
 </html>
