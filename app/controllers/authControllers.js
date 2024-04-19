@@ -23,7 +23,7 @@ const signup = (req, res) => {
     const existingUser = users.find((user) => user.username === username);
     if (existingUser) {
       const msg = "Username Already Exists"
-      const status ="fail"
+      const status = "fail"
       return res.status(400).redirect(`/signup.html?message=${msg}&status=${status}`)
     }
     const newUser = { username, password };
@@ -34,11 +34,11 @@ const signup = (req, res) => {
         return res.status(500).json({ message: "Internal server error" });
       }
       const msg = "User Registered Successfully"
-      const status ="success"
+      const status = "success"
       res
         .status(201).redirect(`/?message=${msg}&status=${status}`)
     });
   });
 };
 
-module.exports = {signup};
+module.exports = { signup };

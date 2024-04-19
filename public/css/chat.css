@@ -6,6 +6,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed; 
   font-family: 'Poppins';
+  overflow: hidden;
   margin: 0;
 }
 
@@ -58,18 +59,63 @@ a {
   border-right: 1px solid rgba(109, 109, 109, 0.3);
   border-bottom: 1px solid rgba(109, 109, 109, 0.3);
   border-left: none;
-  height: 120px;
+  height: 80px;
   flex-grow: 1;
+}
+
+.left-panel {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: rgba(109, 109, 109, 0.3) solid 1px;
+  width: 235px;
+  height: 100vh;
 }
 
 .user-account {
   display: flex;
+  border: rgba(109, 109, 109, 0.3) solid 1px;
+  width: 235px;
+  height: 200px;
+}
+
+.user-account i {
+  color: rgba(255, 255, 255, 0.5);
+  transition: .3s;
+}
+
+.user-account i:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.user-settings {
+  display: flex;
+  margin-top: 30px;
+  margin-left: 15px;
+}
+
+.user-avatar {
+  display: flex;
+  width:  65px;
+  height: 65px;
+  border-radius: 50%;
+}
+
+.chats-heading {
+  color: rgb(255, 255, 255);
+  margin-left: 10px;
+}
+
+.user-settings-icons {
+  display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  border: rgba(109, 109, 109, 0.3) solid 1px;
-  width: 250px;
-  height: 200px;
+  margin-top: 20px;
+  margin-left: 10px;
+  background: rgba(217, 217, 217, 0.15);
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
 }
 
 .user-search {
@@ -79,7 +125,8 @@ a {
   height: 30px;
   background: rgba(217, 217, 217, 0.15);
   border-radius: 20px;
-  margin-top: 100px;
+  margin-top: 125px;
+  margin-left: -210px;
   padding: 5px 20px;
 }
 
@@ -94,13 +141,12 @@ a {
   font-size: 14px;
 }
 
-
-/* .chat-left-panel {
+.chat-left-panel {
   background-color: rgba(0, 0, 0, 0.5);
   border: rgba(109, 109, 109, 0.5) solid 1px;
   width: 200px;
   height: 100%;
-} */
+}
 
 .chat-messages {
   padding: 30px;

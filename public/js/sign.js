@@ -12,19 +12,19 @@ function togglePasswordVisibility(inputId) {
   }
 };
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('enter-chat');
   const displayMessage = document.getElementById('displayMessage');
   const passwordInput = document.getElementById('password');
   const repPasswordInput = document.getElementById('rep-password');
 
-  form.addEventListener('submit', function(event) {
-      if (passwordInput.value !== repPasswordInput.value) {
-          event.preventDefault();
-          displayMessage.textContent = "Passwords don't Match";
-          displayMessage.style.color = 'red';
-      } else {
-          displayMessage.textContent = '';
-      }
+  form.addEventListener('submit', function (event) {
+    if (passwordInput.value !== repPasswordInput.value) {
+      event.preventDefault();
+      displayMessage.textContent = "Passwords don't Match";
+      displayMessage.style.color = 'red';
+    } else {
+      displayMessage.textContent = '';
+    }
   });
 });
