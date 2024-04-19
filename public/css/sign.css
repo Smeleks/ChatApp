@@ -17,6 +17,14 @@ a {
   text-decoration: none;
 }
 
+i {
+  transition: .5s;
+}
+
+i:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
 #displayMessage {
   height: 0px;
   text-align: center;
@@ -109,7 +117,7 @@ select[class="choose-room"] {
 
 .sign-btn {
   background-color: rgba(255, 255, 255, 0.3);
-  color: rgb(255, 255, 255);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 18px;
   margin-top: 25px;
   margin-bottom: 15px;
@@ -117,7 +125,13 @@ select[class="choose-room"] {
   height: 45px;
   border: none;
   border-radius: 20px;
+  transition: .5s;
   cursor: pointer;
+}
+
+.sign-btn:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: rgb(255, 255, 255);
 }
 
 .sign-up-link {

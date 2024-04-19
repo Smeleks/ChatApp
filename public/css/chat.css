@@ -67,7 +67,7 @@ a {
   display: flex;
   background-color: rgba(0, 0, 0, 0.5);
   border: rgba(109, 109, 109, 0.3) solid 1px;
-  width: 235px;
+  width: 210px;
   height: 100vh;
 }
 
@@ -95,8 +95,8 @@ a {
 
 .user-avatar {
   display: flex;
-  width:  65px;
-  height: 65px;
+  width:  60px;
+  height: 60px;
   border-radius: 50%;
 }
 
@@ -126,26 +126,23 @@ a {
   background: rgba(217, 217, 217, 0.15);
   border-radius: 20px;
   margin-top: 125px;
-  margin-left: -210px;
-  padding: 5px 20px;
+  margin-left: -185px;
+  padding: 5px;
 }
 
 .user-search i {
   color: rgba(255, 255, 255, 0.3);
+  margin-left: 5px;
+  cursor: pointer;
 }
 
 .search-input {
   background: none;
   outline: none;
+  border: none;
+  padding: 12px;
   color: white;
   font-size: 14px;
-}
-
-.chat-left-panel {
-  background-color: rgba(0, 0, 0, 0.5);
-  border: rgba(109, 109, 109, 0.5) solid 1px;
-  width: 200px;
-  height: 100%;
 }
 
 .chat-messages {
@@ -188,7 +185,7 @@ a {
   /* justify-content: center; */
 }
 
-input,
+/* input,
 select {
   border: none;
   border-radius: 12px;
@@ -196,7 +193,7 @@ select {
   color: var(--primary);
   font-weight: 600;
   font-size: 10px;
-}
+} */
 
 .chat-form-container input {
   font-size: 16px;

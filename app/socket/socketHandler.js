@@ -1,7 +1,7 @@
 const socket = require("socket.io");
 const formatMessage = require("../utils/messages");
 
-function initializeSocket(server) {
+const initializeSocket = (server) => {
   const io = socket(server);
 
   io.on("connection", (socket) => {
