@@ -1,10 +1,11 @@
+require('dotenv').config();
+
 const express = require("express");
 const path = require("path");
 const http = require("http");
 const bodyParser = require("body-parser");
 const authRoutes = require("./app/routes/authRoutes");
 const initializeSocket = require("./app/socket/socketHandler");
-require("dotenv").config()
 
 const app = express();
 const server = http.createServer(app);

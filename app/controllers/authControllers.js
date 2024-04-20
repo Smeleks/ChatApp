@@ -72,7 +72,7 @@ const login = (req, res) => {
     }
     const user = users.find((user) => user.username === username);
     if (!user) {
-      const message = "Username does not exist!";
+      const message = "Username doesn't Exist";
       const status = "fail";
       return res.status(404).redirect(`/?message=${message}&status=${status}`);
     }
@@ -82,7 +82,7 @@ const login = (req, res) => {
           const token = jwt.sign({ username, room }, JWT_SECRET_KEY);
           res.redirect(`/chat.html?token=${token}`);
         } else {
-          const message = "Incorrect username or password.";
+          const message = "Incorrect Password.";
           const status = "fail";
           res.redirect(`/?message=${message}&status=${status}`);
         }
