@@ -151,7 +151,7 @@ a {
   bottom: 0;
   left: 210px;
   right: 210px;
-  height: 45px;
+  height: 47.5px;
 }
 
 .chat-form i {
@@ -183,10 +183,10 @@ a {
 
 .chat-messages {
   padding: 30px;
-  height: 60vh;
+  height: 74vh;
   overflow-y: scroll;
-  font-weight: 600;
   font-size: 14px;
+  margin-top: 80px;
   color: var(--primary);
 }
 
@@ -208,55 +208,4 @@ a {
 
 .chat-messages .message .meta span {
   color: #777;
-}
-
-/* login Page */
-.login-container {
-  max-width: 700px;
-  margin: 80px auto;
-  color: #fff;
-}
-
-.login-header {
-  text-align: center;
-  padding: 20px;
-  background: var(--primary);
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
-
-.login-main {
-  padding: 30px 40px;
-  background: var(--secondary);
-}
-
-.login-main p {
-  margin-bottom: 20px;
-}
-
-.login-main .form-control {
-  margin-bottom: 20px;
-}
-
-.login-main label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.login-main input {
-  font-size: 16px;
-  height: 40px;
-  width: 100%;
-}
-
-.login-main select {
-  font-size: 16px;
-  height: 40px;
-  width: 100%;
-}
-
-.login-main .btn {
-  margin-top: 20px;
-  width: 100%;
-  padding: 15px;
 }
