@@ -1,8 +1,12 @@
-const socket = io();
-const chatForm = document.getElementById("chat-form");
-
 const params = new URLSearchParams(window.location.search);
 const token = params.get("token");
+
+if (token) {
+  localStorage.setItem("token", token);
+}
+
+const socket = io();
+const chatForm = document.getElementById("chat-form");
 
 chatForm.addEventListener("submit", (e) => {
   e.preventDefault();
