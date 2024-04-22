@@ -1,6 +1,9 @@
 const socket = io();
-
 const chatForm = document.getElementById("chat-form");
+
+const params = new URLSearchParams(window.location.search);
+const token = params.get("token");
+
 chatForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const msg = e.target.elements.msg.value;
@@ -20,3 +23,5 @@ function outputMsg(data) {
 socket.on("message", (data) => {
   outputMsg(data);
 });
+
+socket.emit('joinRoom', token);
