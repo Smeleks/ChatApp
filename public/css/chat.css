@@ -193,19 +193,19 @@ a {
 .chat-messages .message {
   padding: 10px;
   margin-bottom: 15px;
-  background-color: var(--light);
-  border-radius: 5px;
-  overflow-wrap: break-word;
+  background-color: rgb(255, 255, 255);
+  border-radius: 7.5px;
+  /* overflow-wrap: break-word; */
 }
 
-.chat-messages .message .meta {
-  font-size: 15px;
-  font-weight: bold;
-  color: var(--primary);
-  opacity: 0.7;
-  margin-bottom: 7px;
+.chat-messages .message .nickname {
+  font-size: 12px;
+  font-weight: bolder;
+  color: rgb(0, 0, 0);
+  /* opacity: 0.7; */
+  /* margin-bottom: 7px; */
 }
 
-.chat-messages .message .meta span {
+.chat-messages .message .nickname span {
   color: #777;
 }

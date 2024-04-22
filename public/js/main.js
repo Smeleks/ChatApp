@@ -13,8 +13,8 @@ function outputMsg(data) {
   const container = document.querySelector(".chat-messages");
   div.classList.add("message");
 
-  div.innerHTML = `<p class='meta'>${data.username}
-<span>${data.time}</span></p><p class='text'>${data.message}</p>`;
+  div.innerHTML = `<p class='nickname'>${data.username}
+<span class="time">${data.time}</span></p><p class='text'>${data.message}</p>`;
   container.appendChild(div);
 }
 socket.on("message", (data) => {
