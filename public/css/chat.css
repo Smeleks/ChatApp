@@ -230,3 +230,17 @@ a {
 .chat-messages::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.5);
 }
+
+.leave-btn {
+  position: absolute;
+  right: 0;
+  margin-top: 20px;
+  margin-right: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  transition: .3s;
+  cursor: pointer;
+}
+
+.leave-btn:hover {
+  color: rgba(255, 255, 255, 1);
+}

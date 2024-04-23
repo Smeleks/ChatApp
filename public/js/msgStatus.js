@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const params = new URLSearchParams(window.location.search)
-  const messageContainer = document.getElementById("displayMessage")
+  const params = new URLSearchParams(window.location.search);
+  const messageContainer = document.getElementById("displayMessage");
 
-  const message = params.get("message")
-  const status = params.get("status")
+  const message = params.get("message");
+  const status = params.get("status");
   console.log(message);
   console.log(status);
   if (message) {
@@ -16,6 +16,5 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       messageContainer.innerText = ''
     }, 10000)
-  }
-
-})
+  };
+});

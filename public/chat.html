@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang='en'>
-
 <head>
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
@@ -9,9 +8,7 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.js'></script>
   <title>Chat</title>
 </head>
-
 <body>
-
   <div class='chat-container'>
     <div class="left-panel">
       <div class="user-account">
@@ -26,7 +23,7 @@
 
         <div class="user-search"> <i class="ri-search-line"></i> <input type="text" class="search-input"
             placeholder="Search"> </div>
-      </div>
+        </div>
 
       <div class='chat-sidebar'>
         <h4 id='room-name' class="room-name"></h4>
@@ -39,8 +36,7 @@
     <div class='chat-header'>
       <!-- <a id='leave-btn' class='btn'><img class='chat-icon' src='img/close.png' alt='close' /></a> -->
 
-    <div class='chat-messages'></div>
-
+      <div class='chat-messages'></div>
     </div>
 
     <form id="chat-form" class="chat-form">
@@ -52,13 +48,10 @@
 
     <div class="right-panel">
       <!-- ... -->
+      <i class="ri-logout-box-line leave-btn" id="leave-btn"></i>
     </div>
-    
   </div>
 
-
   <script src='./js/main.js'></script>
-  <script src='./js/sign.js'></script>
 </body>
-
 </html>

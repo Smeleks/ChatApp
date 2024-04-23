@@ -1,9 +1,11 @@
+require("dotenv").config();
+
+const path = require("path");
+const fs = require("fs");
+
 const jwt = require("jsonwebtoken");
 const { hashPass, comparePass } = require("../utils/bcrypt")
 const uuid = require("uuid");
-
-const fs = require("fs");
-const path = require("path");
 
 const usersFilePath = path.join(__dirname, "../../public/users.json");
 const JWT_SECRET_KEY = process.env.MY_CUSTOM_SECRET_KEY;
@@ -19,6 +21,7 @@ const signup = (req, res) => {
       console.error("Error reading users file:", err);
       return res.status(500).json({ message: "Internal server error" });
     }
+
     let users = [];
     if (data) {
       try {
@@ -28,12 +31,16 @@ const signup = (req, res) => {
         return res.status(500).json({ message: "Internal server error" });
       }
     }
+    
     const existingUser = users.find((user) => user.username === username);
     if (existingUser) {
       const msg = "Username Already Exists"
       const status = "fail"
-      return res.status(400).redirect(`/signup.html?message=${msg}&status=${status}`)
+      return res
+      .status(400)
+      .redirect(`/signup.html?message=${msg}&status=${status}`)
     }
+
     hashPass(password).then((bcryptedPassword) => {
       const token = jwt.sign({ username }, JWT_SECRET_KEY);
       const id = uuid.v4();

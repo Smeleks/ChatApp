@@ -1,0 +1,9 @@
+[
+  {
+    "id": "8b587675-0f0b-4b44-94f2-cd5549ad2ef9",
+    "username": "Alex",
+    "password": "$2a$10$p7.Qjzoz2gOFYOq4pyZ7VOPLaZKWuKfvIVIzClFy631O5yD/GRuh.",
+    "gender": "Male",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFsZXgiLCJpYXQiOjE3MTM4OTc0MDV9.i9BEj6FOhvOQkSCtr6j0tQzNftEOeUGSA_Fl7x7FhBI"
+  }
+]

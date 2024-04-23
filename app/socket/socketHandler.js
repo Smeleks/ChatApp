@@ -3,7 +3,7 @@ const socket = require("socket.io");
 const formatMessage = require("../utils/messages");
 const jwt = require("jsonwebtoken");
 const JWT_SECRET_KEY = process.env.MY_CUSTOM_SECRET_KEY;
-const {userJoin} = require("../utils/user");
+const { userLeave, userJoin, getRoomUsers } = require("../utils/user");
 
 const initializeSocket = (server) => {
   const io = socket(server);
