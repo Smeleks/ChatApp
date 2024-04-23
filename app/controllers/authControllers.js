@@ -12,7 +12,7 @@ const signup = (req, res) => {
   const username = req.body.username;
   const password = req.body.password;
   const gender = req.body.gender;
-  const bdate = req.body.bdate;
+  const bdate = req.body.bdatez;
 
   fs.readFile(usersFilePath, "utf8", (err, data) => {
     if (err) {
