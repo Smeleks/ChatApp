@@ -130,6 +130,7 @@ a {
 .room-name {
   color: rgb(255, 255, 255);
   margin-left: 15px;
+  margin-top: 15px;
 }
 
 .users-count {

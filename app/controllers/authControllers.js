@@ -11,6 +11,8 @@ const JWT_SECRET_KEY = process.env.MY_CUSTOM_SECRET_KEY;
 const signup = (req, res) => {
   const username = req.body.username;
   const password = req.body.password;
+  const gender = req.body.gender;
+  const bdate = req.body.bdate;
 
   fs.readFile(usersFilePath, "utf8", (err, data) => {
     if (err) {
@@ -35,7 +37,7 @@ const signup = (req, res) => {
     hashPass(password).then((bcryptedPassword) => {
       const token = jwt.sign({ username }, JWT_SECRET_KEY);
       const id = uuid.v4();
-      const newUser = { id, username, password: bcryptedPassword, token };
+      const newUser = { id, username, password: bcryptedPassword, gender, bdate, token };
       users.push(newUser);
 
       fs.writeFile(usersFilePath, JSON.stringify(users), "utf8", (writeErr) => {

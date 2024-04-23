@@ -11,9 +11,9 @@
     <title>Sign Up</title>
 </head>
 <body>
-    <div class='sign-container'>
+    <div class='sign-container sign-up-container'>
       <h1 class='sign-heading'> Create Your Account </h1>
-        <h3 class='sign-second-heading'>Enter your username and password </h3>
+        <h3 class='sign-second-heading'>Enter your username, password, gender and birth date</h3>
 
         <p id='displayMessage'></p>
 
@@ -29,6 +29,14 @@
             <input type="password" name="rep-password" id="rep-password" class="rep-password" placeholder="Repeat the Password" required />
             <i class="ri-eye-line toggle-password" onclick="togglePasswordVisibility('rep-password')"></i>
           </div>
+
+          <select name='gender' id='gender' class='choose-gender'>
+            <option value=''> Choose Gender </option>
+            <option value='Male'> Male </option>
+            <option value='Female'> Female </option>
+          </select>
+
+          <input type="date" name="bdate" id="bdate" class="bdate" required>
             
           <button type='submit' class='sign-btn' id="sign-up">Sign Up</button>
             

@@ -44,6 +44,10 @@ i:hover {
   padding: 20px;
 }
 
+.sign-up-container {
+  height: 550px;
+}
+
 #enter-chat {
   display: flex;
   flex-direction: column;
@@ -69,7 +73,8 @@ i:hover {
 
 input[class='username'],
 input[class='password'],
-input[class='rep-password'] {
+input[class='rep-password'],
+input[class='bdate'] {
     display: block;
     background: rgba(0, 0, 0, 0.3);
     border: 0;
@@ -84,7 +89,40 @@ input[class='rep-password'] {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
+input[class="bdate"] {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+input.bdate::-webkit-calendar-picker-indicator {
+  filter: invert(1) opacity(0.3);
+  cursor: pointer;
+  transition: .5s;
+}
+
+input.bdate::-webkit-calendar-picker-indicator:hover {
+  filter: invert(1) opacity(0.8);
+  cursor: pointer;
+}
+
 select[class="choose-room"] {
+  display: block;
+  background: rgba(0, 0, 0, 0.3);
+  border: 0;
+  text-align: center;
+  border-radius: 15px; 
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 16px;
+  margin: 5px 0;
+  width: 280px;
+  outline: none;
+  padding: 16px 20px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+select[class="choose-gender"] {
   display: block;
   background: rgba(0, 0, 0, 0.3);
   border: 0;
