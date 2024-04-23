@@ -20,12 +20,13 @@ function outputMsg(data) {
   const container = document.querySelector(".chat-messages");
   div.classList.add("message");
 
-  div.innerHTML = `<p class='nickname'>${data.username}
-<span class="time">${data.time}</span></p><p class='text'>${data.message}</p>`;
+  div.innerHTML = `<p class="nickname">${data.username}</p>
+                  <p class="text">${data.message}</p>
+                  <span class="time">${data.time}</span>`;
   container.appendChild(div);
 }
 socket.on("message", (data) => {
   outputMsg(data);
 });
 
-socket.emit('joinRoom', token);
+socket.emit("joinRoom", token);
