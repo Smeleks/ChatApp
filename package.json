@@ -13,6 +13,8 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "dotenv": "^16.4.5",
+    "emoji-api": "^3.0.1",
+    "emoji-mart": "^5.5.2",
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
     "moment": "^2.30.1",

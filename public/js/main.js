@@ -60,10 +60,7 @@ socket.on("message", (data) => {
 
 // Leave chat confirmation
 document.getElementById("leave-btn").addEventListener("click", () => {
-  const conf = confirm("Are you sure, you want to leave the chat?");
-  if (conf) {
     window.location.href = "../";
-  }
 });
 
 // Emit join room event

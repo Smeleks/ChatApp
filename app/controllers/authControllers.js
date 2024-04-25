@@ -10,11 +10,17 @@ const uuid = require("uuid");
 const usersFilePath = path.join(__dirname, "../../public/users.json");
 const JWT_SECRET_KEY = process.env.MY_CUSTOM_SECRET_KEY;
 
+const getAvatarPath = (gender) => {
+  const avatarIndex = Math.floor(Math.random() * 10);
+  return `./img/avatars/${gender.toLowerCase()}/${gender.toLowerCase()}-${avatarIndex}.jpg`;
+};
+
 const signup = (req, res) => {
   const username = req.body.username;
   const password = req.body.password;
   const gender = req.body.gender;
-  const bdate = req.body.bdatez;
+  const bdate = req.body.bdate;
+  let avatar = getAvatarPath(gender);
 
   fs.readFile(usersFilePath, "utf8", (err, data) => {
     if (err) {
@@ -44,7 +50,7 @@ const signup = (req, res) => {
     hashPass(password).then((bcryptedPassword) => {
       const token = jwt.sign({ username }, JWT_SECRET_KEY);
       const id = uuid.v4();
-      const newUser = { id, username, password: bcryptedPassword, gender, bdate, token };
+      const newUser = { id, username, password: bcryptedPassword, gender, bdate, avatar, token };
       users.push(newUser);
 
       fs.writeFile(usersFilePath, JSON.stringify(users), "utf8", (writeErr) => {
@@ -52,6 +58,9 @@ const signup = (req, res) => {
           console.error("Error writing users file:", writeErr);
           return res.status(500).json({ message: "Internal server error" });
         }
+      
+        newUser.avatar = `./img/${gender.toLowerCase()}/${avatar}`;
+      
         const successMessage = "User Created Successfully";
         const status = "success";
         res

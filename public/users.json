@@ -1,9 +1,20 @@
 [
   {
-    "id": "8b587675-0f0b-4b44-94f2-cd5549ad2ef9",
-    "username": "Alex",
-    "password": "$2a$10$p7.Qjzoz2gOFYOq4pyZ7VOPLaZKWuKfvIVIzClFy631O5yD/GRuh.",
+    "id": "a48f9beb-760c-4e0e-869a-c4ce6b917f98",
+    "username": "s",
+    "password": "$2a$10$hVj/zwo6/cJbTgd4Pgaz9uvEis48zl7osSSisYQxrYdp/VlG3DBkq",
     "gender": "Male",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFsZXgiLCJpYXQiOjE3MTM4OTc0MDV9.i9BEj6FOhvOQkSCtr6j0tQzNftEOeUGSA_Fl7x7FhBI"
+    "bdate": "2024-04-10",
+    "avatar": "./img/avatars/male/male-1.jpg",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InMiLCJpYXQiOjE3MTQwNTA0NTN9.GptsrvC4VOuc9Guh02Iqk_llqpFO1ikC1Z75i_5IJCc"
+  },
+  {
+    "id": "dd7fbb9d-c146-4bdc-b0c9-067884e583e5",
+    "username": "a",
+    "password": "$2a$10$g8C9.7p64MEH8Uhe/j6ufOuVZAvlxu3dAm7Ded.ZXeUHPBmqZz62W",
+    "gender": "Female",
+    "bdate": "2024-03-31",
+    "avatar": "./img/avatars/female/female-0.jpg",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImEiLCJpYXQiOjE3MTQwNTA0NzF9.uMDk2MnivphSPePkWPNi-f1dyItZ0noFfwS0ryzm9Eo"
   }
 ]
